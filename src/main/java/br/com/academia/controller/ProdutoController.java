@@ -20,13 +20,13 @@ public class ProdutoController {
     @PostMapping("/produtos")
     @ResponseStatus(HttpStatus.CREATED)
     public Produto createProduto(@RequestBody Produto produto){
-        return produtoService.createTask(produto);
+        return produtoService.createProduto(produto);
     }
 
     @GetMapping("/produtos")
     @ResponseStatus(HttpStatus.OK)
     public List<Produto> getAllProdutos(){
-        return produtoService.listAllTasks();
+        return produtoService.listAllProdutos();
     }
 
     @GetMapping("/produtos/{id}")
