@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
@@ -29,7 +30,7 @@ public class Usuario {
 
     @Column(nullable = false)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Calendar dataNascimento;
+    private LocalDate dataNascimento;
 
     @Column(nullable = false)
     private String email;
