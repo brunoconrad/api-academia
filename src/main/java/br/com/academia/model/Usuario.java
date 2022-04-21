@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -28,7 +29,7 @@ public class Usuario {
 
     @Column(nullable = false)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date dataNascimento;
+    private Calendar dataNascimento;
 
     @Column(nullable = false)
     private String email;
