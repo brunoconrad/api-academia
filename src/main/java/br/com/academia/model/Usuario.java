@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "usuario")
@@ -27,7 +28,7 @@ public class Usuario {
 
     @Column(nullable = false)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private LocalDateTime dataNascimento;
+    private Date dataNascimento;
 
     @Column(nullable = false)
     private String email;
