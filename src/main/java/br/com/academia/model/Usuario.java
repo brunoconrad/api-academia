@@ -3,6 +3,7 @@ package br.com.academia.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -25,6 +26,7 @@ public class Usuario {
     private String senha;
 
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime dataNascimento;
 
     @Column(nullable = false)
