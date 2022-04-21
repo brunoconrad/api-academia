@@ -39,6 +39,7 @@ public class InfoEmpresaService {
                     empresaToUpdate.setNumero(infoEmpresa.getNumero());
                     empresaToUpdate.setUf(infoEmpresa.getUf());
                     empresaToUpdate.setTelefone(infoEmpresa.getTelefone());
+                    empresaToUpdate.setEmail(infoEmpresa.getEmail());
                     InfoEmpresa updated = infoEmpresaRepository.save(empresaToUpdate);
                     return ResponseEntity.ok().body(updated);
                 }).orElse(ResponseEntity.notFound().build());

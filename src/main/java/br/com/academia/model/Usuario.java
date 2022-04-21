@@ -5,13 +5,14 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "info_empresa")
+@Table(name = "usuario")
 @Setter
 @Getter
 @ToString
-public class InfoEmpresa {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,27 +22,15 @@ public class InfoEmpresa {
     private String nome;
 
     @Column(nullable = false)
-    private String cnpj;
+    private String senha;
 
     @Column(nullable = false)
-    private String logradouro;
-
-    @Column(nullable = false)
-    private String uf;
-
-    @Column(nullable = false)
-    private String cidade;
-
-    @Column(nullable = false)
-    private String numero;
-
-    @Column(nullable = false)
-    private String bairro;
-
-    @Column(nullable = false)
-    private String telefone;
+    private LocalDateTime dataNascimento;
 
     @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
+    private String cpf;
 
 }
