@@ -20,9 +20,6 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true)
-    private String title;
-
     @Column(nullable = false)
     private String descricao;
 
@@ -31,5 +28,8 @@ public class Produto {
 
     @Column(nullable = false)
     private String nome;
+
+    @Column(nullable = false)
+    private String foto;
 
 }
